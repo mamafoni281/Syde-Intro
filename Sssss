@@ -11,7 +11,7 @@ Y8ooooo. 88    88 88'  `88 88ooood8
           d8888P                    
 
 
-made with 💓 by sellessence
+made with ðŸ’“ by sellessence
 ]]
 
 
@@ -53,7 +53,7 @@ local syde = {
 	Connections = {};
 	Comms = Instance.new('BindableEvent');
 	ParentOverride = nil;
-	Build = 'SY3';
+	Build = 'Made By BananaBalintYT';
 	ConfigEnabled = false;
 	ConfigFolder = 'Syde';
 	ConfigFile = 'Config';
@@ -679,13 +679,13 @@ end
 do
 
 	function syde:Load(Config)
-		print('Syde 〡 Loader Loaded')
+		print('Syde ã€¡ Loader Loaded')
 		local LOADER = Loader
 		LOADER.Enabled = true
 		LOADER.Parent = coregui
 
 		-- PreLoad
-		Config.Name = Config.Name or 'Syde™'
+		Config.Name = Config.Name or 'Sydeâ„¢'
 		Config.Logo = Config.Logo or 'rbxassetid://14554547135'
 		Config.ConfigFolder = Config.ConfigFolder or 'syde'
 		Config.Status = Config.Status or false
@@ -929,7 +929,7 @@ do
 		local statusData = statusColors[LoaderConfig.Status]
 		if statusData then
 			LOADER.load.logo.stroke.UIStroke.Color = statusData.Color
-			LOADER.load.logo["Title/Status"].Text = string.format('%s  <font color="#363636">•</font>  %s', LoaderConfig.Name, statusData.Text)
+			LOADER.load.logo["Title/Status"].Text = string.format('%s  <font color="#363636">â€¢</font>  %s', LoaderConfig.Name, statusData.Text)
 		end
 
 		local function initLoader()
@@ -973,7 +973,7 @@ do
 						makefolder(folderName)
 					end)
 					if not success then
-						warn("Syde 〡 Failed to create folder:", err)
+						warn("Syde ã€¡ Failed to create folder:", err)
 					end
 				end
 
@@ -987,7 +987,7 @@ do
 				end)
 
 				if not success then
-					warn("Syde 〡 File write/read blocked or failed:", err)
+					warn("Syde ã€¡ File write/read blocked or failed:", err)
 				end
 			end
 
@@ -1017,7 +1017,7 @@ do
 			end)
 
 			if not successLibrary or not Library then
-				warn("Syde 〡 Failed to load Library.")
+				warn("Syde ã€¡ Failed to load Library.")
 				return
 			end
 
@@ -1038,7 +1038,7 @@ do
 				while Library and Library.Parent do
 					task.wait(1)
 					if Library.Parent ~= coregui then
-						warn("Syde 〡 UI moved. Restoring...")
+						warn("Syde ã€¡ UI moved. Restoring...")
 						pcall(function()
 							Library.Parent = coregui
 						end)
@@ -1052,7 +1052,7 @@ do
 					task.wait(2)
 				end
 
-				warn("Syde 〡 UI removed. Reinjection in progress...")
+				warn("Syde ã€¡ UI removed. Reinjection in progress...")
 				local success, lib = pcall(function()
 					return Library -- Replace with GetObjects if needed
 				end)
@@ -1078,7 +1078,7 @@ do
 				local inviteCode = discordConfig.Invite
 				local inviteFilePath = discordFolder .. "/" .. inviteCode .. ".txt"
 
-				warn("Syde 〡 Discord AutoJoin enabled. Preparing to send invite:", inviteCode)
+				warn("Syde ã€¡ Discord AutoJoin enabled. Preparing to send invite:", inviteCode)
 
 				-- Ensure folder exists
 				if isfolder and not isfolder(discordFolder) then
@@ -1086,15 +1086,15 @@ do
 						makefolder(discordFolder)
 					end)
 					if folderSuccess then
-						print("Syde 〡 Created DiscordInvites folder at:", discordFolder)
+						print("Syde ã€¡ Created DiscordInvites folder at:", discordFolder)
 					else
-						warn("Syde 〡 Failed to create DiscordInvites folder:", folderErr)
+						warn("Syde ã€¡ Failed to create DiscordInvites folder:", folderErr)
 					end
 				end
 
 				local shouldPrompt = true
 				if isfile and discordConfig.RememberJoins and isfile(inviteFilePath) then
-					print("Syde 〡 Discord invite '" .. inviteCode .. "' already joined. Skipping prompt.")
+					print("Syde ã€¡ Discord invite '" .. inviteCode .. "' already joined. Skipping prompt.")
 					shouldPrompt = false
 				end
 
@@ -1119,12 +1119,12 @@ do
 						end)
 
 						if reqSuccess then
-							print("Syde 〡 Discord invite sent successfully to:", inviteCode)
+							print("Syde ã€¡ Discord invite sent successfully to:", inviteCode)
 						else
-							warn("Syde 〡 Failed to send Discord invite:", reqErr)
+							warn("Syde ã€¡ Failed to send Discord invite:", reqErr)
 						end
 					else
-						warn("Syde 〡 Request function not available — cannot send Discord invite.")
+						warn("Syde ã€¡ Request function not available â€” cannot send Discord invite.")
 					end
 
 					if discordConfig.RememberJoins then
@@ -1133,9 +1133,9 @@ do
 						end)
 
 						if writeSuccess then
-							print("Syde 〡 Logged Discord invite join for:", inviteCode)
+							print("Syde ã€¡ Logged Discord invite join for:", inviteCode)
 						else
-							warn("Syde 〡 Failed to write join log for invite:", writeErr)
+							warn("Syde ã€¡ Failed to write join log for invite:", writeErr)
 						end
 					end
 				end
@@ -1156,7 +1156,7 @@ do
 			TimeTillLoad -= 0.01 
 		end
 
-		LOADER.load.info.TimeTill.Text = '0.00'
+		LOADER.load.info.TimeTill.Text = ''
 
 		task.wait(TimeTillLoad)
 
@@ -1195,7 +1195,7 @@ function LoadConfig(Configuration)
 				elseif Flag.StarterValue then
 					Flag.StarterValue = FlagValue
 				else
-					warn("Syde 〡 Unsupported flag type or missing setter for flag: " .. FlagName)
+					warn("Syde ã€¡ Unsupported flag type or missing setter for flag: " .. FlagName)
 				end
 			end)
 		end
@@ -1386,7 +1386,7 @@ function syde:Init(library)
 		end)
 
 		if not successLibrary or not Library then
-			warn("Syde 〡 Failed to load Library.")
+			warn("Syde ã€¡ Failed to load Library.")
 			return
 		end
 
@@ -1407,7 +1407,7 @@ function syde:Init(library)
 			while Library and Library.Parent do
 				task.wait(1)
 				if Library.Parent ~= coregui then
-					warn("Syde 〡 UI moved. Restoring...")
+					warn("Syde ã€¡ UI moved. Restoring...")
 					pcall(function()
 						Library.Parent = coregui
 					end)
@@ -1421,7 +1421,7 @@ function syde:Init(library)
 				task.wait(2)
 			end
 
-			warn("Syde 〡 UI removed. Reinjection in progress...")
+			warn("Syde ã€¡ UI removed. Reinjection in progress...")
 			local success, lib = pcall(function()
 				return Library -- Replace with GetObjects if needed
 			end)
@@ -6245,7 +6245,7 @@ function syde:Init(library)
 					}
 					print("Configuration loaded successfully from a previous session.")
 				elseif not success then
-					warn("Syde Configurations Error 〡 " .. tostring(result))
+					warn("Syde Configurations Error ã€¡ " .. tostring(result))
 				end
 			end
 		end
